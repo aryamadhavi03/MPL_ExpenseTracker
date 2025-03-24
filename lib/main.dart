@@ -16,12 +16,16 @@ import 'screens/fixed_expenses_screen.dart';
 import 'screens/spin_and_save_screen.dart';
 import 'screens/daily_quiz_screen.dart';
 import 'screens/savings_challenges_screen.dart';
+import 'package:flutter/material.dart';
+import 'services/notification_service.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  
 
   runApp(
     ChangeNotifierProvider(
@@ -30,6 +34,7 @@ void main() async {
     ),
   );
 }
+
 
 class ExpenseTrackerApp extends StatefulWidget {
   @override
